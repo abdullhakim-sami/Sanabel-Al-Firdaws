@@ -1,18 +1,15 @@
 ---
 slug: long-blog-post
 title: Long Blog Post
-authors:
-  - name: Endilie Yacop Sucipto
-    title: Maintainer of Docusaurus
-    url: "https://github.com/endiliey"
-    image_url: "https://github.com/endiliey.png"
-tags:
-  - hello
-  - docusaurus
-date: "2019-05-29"
+authors: endi
+tags: [hello, docusaurus]
 ---
 
 This is the summary of a very long blog post,
+
+Use a `<!--` `truncate` `-->` comment to limit blog post size in the list view.
+
+<!--truncate-->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
 

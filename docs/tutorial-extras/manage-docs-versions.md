@@ -1,5 +1,5 @@
 ---
-title: Manage Docs Versions
+sidebar_position: 1
 ---
 
 # Manage Docs Versions
@@ -28,13 +28,13 @@ To navigate seamlessly across versions, add a version dropdown.
 Modify the `docusaurus.config.js` file:
 
 ```js title="docusaurus.config.js"
-module.exports = {
+export default {
   themeConfig: {
     navbar: {
       items: [
         // highlight-start
         {
-          type: "docsVersionDropdown",
+          type: 'docsVersionDropdown',
         },
         // highlight-end
       ],
@@ -45,7 +45,7 @@ module.exports = {
 
 The docs version dropdown appears in your navbar:
 
-![Docs Version Dropdown](/img/docs/docsVersionDropdown.png)
+![Docs Version Dropdown](./img/docsVersionDropdown.png)
 
 ## Update an existing version
 

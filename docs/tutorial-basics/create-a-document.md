@@ -1,5 +1,5 @@
 ---
-title: Create a Document
+sidebar_position: 2
 ---
 
 # Create a Document
@@ -14,7 +14,7 @@ Documents are **groups of pages** connected through:
 
 Create a Markdown file at `docs/hello.md`:
 
-```markdown
+```md title="docs/hello.md"
 # Hello
 
 This is my **first Docusaurus document**!
@@ -28,9 +28,9 @@ Docusaurus automatically **creates a sidebar** from the `docs` folder.
 
 Add metadata to customize the sidebar label and position:
 
-```md
+```md title="docs/hello.md" {1-4}
 ---
-sidebar_label: "Hi!"
+sidebar_label: 'Hi!'
 sidebar_position: 3
 ---
 
@@ -41,16 +41,16 @@ This is my **first Docusaurus document**!
 
 It is also possible to create your sidebar explicitly in `sidebars.js`:
 
-```js
-module.exports = {
+```js title="sidebars.js"
+export default {
   tutorialSidebar: [
-    "intro",
+    'intro',
     // highlight-next-line
-    "hello",
+    'hello',
     {
-      type: "category",
-      label: "Tutorial",
-      items: ["tutorial-basics/create-a-document"],
+      type: 'category',
+      label: 'Tutorial',
+      items: ['tutorial-basics/create-a-document'],
     },
   ],
 };
