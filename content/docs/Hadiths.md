@@ -14,7 +14,7 @@ toc: true
 <div id="search"></div>
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search",  highlightParam: "highlight" ,showSubResults: true });
+        new PagefindUI({ element: "#search" ,showSubResults: true });
     });
 </script>
 <div data-pagefind-body>
