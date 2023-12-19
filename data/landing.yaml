@@ -2,7 +2,7 @@
 
 # Hero
 hero:
-  enable: true
+  enable: false
   weight: 10
   template: hero
 
@@ -24,7 +24,7 @@ hero:
   #   alt: "Lotus Docs Logo"
   #   height: 80px
 
-  title: "Lotus Docs"
+  title: "سنابل الفردوس"
   subtitle: A lightweight, **modern documentation** theme for Hugo. Easily customised for building **fast**, **secure**, and **SEO-friendly** documentation sites.
 
   image:
@@ -51,8 +51,8 @@ featureGrid:
   weight: 20
   template: feature grid
 
-  title: Why choose Lotus Docs?
-  subtitle: Lotus Docs is a highly configurable Hugo documentation theme. Yet, with the default configuration you can deploy and publish your documentation site in a matter of minutes. Check out some core features below.
+  title: سنابل الفردوس
+  subtitle: موقع يهتم بنشر العلم النافع
 
   items:
     - title: Fast
@@ -93,7 +93,7 @@ featureGrid:
 
 # Image compare
 imageCompare:
-  enable: true
+  enable: false
   weight: 30
   template: image compare
 
@@ -102,50 +102,42 @@ imageCompare:
 
   items:
     - title: Dark Mode
-      config: {
-        startingPoint: 50,
-        addCircle: true,
-        addCircleBlur: false,
-        showLabels: true,
-        labelOptions: {
-          before: 'Dark',
-          after: 'Light',
-          onHover: false
+      config:
+        {
+          startingPoint: 50,
+          addCircle: true,
+          addCircleBlur: false,
+          showLabels: true,
+          labelOptions: { before: "Dark", after: "Light", onHover: false },
         }
-      }
       imagePath: "images/screenshots"
       imageBefore: "lotusdocs_dark_v0.8.webp"
       imageAfter: "lotusdocs_light_v0.8.webp"
 
     - title: Custom Fonts
-      config: {
-        controlColor: "#3C4257",
-        startingPoint: 25,
-        addCircle: true,
-        addCircleBlur: false,
-        showLabels: true,
-        labelOptions: {
-          before: 'Inter',
-          after: 'Life Saver',
-          onHover: false
+      config:
+        {
+          controlColor: "#3C4257",
+          startingPoint: 25,
+          addCircle: true,
+          addCircleBlur: false,
+          showLabels: true,
+          labelOptions:
+            { before: "Inter", after: "Life Saver", onHover: false },
         }
-      }
       imagePath: "images/screenshots"
       imageBefore: "lotusdocs_google_font_demo_inter_screenshot.webp"
       imageAfter: "lotusdocs_google_font_demo_lifesavers_screenshot.webp"
 
     - title: Accent Color
-      config: {
-        startingPoint: 25,
-        addCircle: true,
-        addCircleBlur: true,
-        showLabels: true,
-        labelOptions: {
-          before: 'Blue',
-          after: 'Cardinal',
-          onHover: false
+      config:
+        {
+          startingPoint: 25,
+          addCircle: true,
+          addCircleBlur: true,
+          showLabels: true,
+          labelOptions: { before: "Blue", after: "Cardinal", onHover: false },
         }
-      }
       imagePath: "images/screenshots"
       imageBefore: "lotusdocs_blue_theme_colour.webp"
       imageAfter: "lotusdocs_cardinal_theme_colour.webp"

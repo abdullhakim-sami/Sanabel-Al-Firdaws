@@ -1,6 +1,6 @@
 ---
 weight: 999
-title: "كتاب الحديث"
+title: "أحاديث مختارة"
 description: ""
 icon: "article"
 date: "2023-12-19T14:33:35+03:00"
@@ -9,8 +9,8 @@ draft: false
 toc: true
 ---
 
-<link href="/../../pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/../../pagefind/pagefind-ui.js"></script>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
