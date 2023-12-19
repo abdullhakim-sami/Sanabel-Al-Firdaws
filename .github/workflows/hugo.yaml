@@ -66,13 +66,13 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Website Search Index
-        run: npx -y pagefind --site public
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
-
+      - name: Website Search Index
+        run: npx -y pagefind --site public
   # Deployment job
   deploy:
     environment:
