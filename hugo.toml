@@ -20,7 +20,8 @@ title = 'My New Hugo Site'
   minQueryChar        = 3      # default is 0 (disabled)
   maxResult           = 5      # default is 5
   searchSectionsIndex = []
-
+[params.docs]
+darkMode = true
 [markup.goldmark.renderer]
       hardWraps = false
       unsafe = true

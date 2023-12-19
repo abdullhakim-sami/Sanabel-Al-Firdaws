@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{{ $.Scratch.Delete "social_list" }}
+{{ $.Scratch.Set "pathName" (printf "%s" (.Site.Params.docs.pathName | default "docs")) }}
+<!-- social_list -->
+{{ $social_params := slice "github" "twitter" "instagram" "rss" }}
+{{ range $social_params }}
+    {{ if isset site.Params.social . }}
+        {{ $.Scratch.Add "social_list" (slice .) }}
+    {{ end }}
+{{ end }}
+<html lang="ar" dir="rtl" data-dark-mode >
+    {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head.html") . -}}
+    <body >
+        <div class="content">
+            
+                    <!-- Start Page Content -->
+                    <main class="page-content bg-transparent">
+                   
+                            <div class="container-fluid">
+                        
+                                    {{ $currentPage := . -}}
+                               
+                                  
+                                        
+                                        <div class="docs-content col-12 {{ if .IsNode }}{{ else }}{{ if site.Params.docs.toc | default true }}{{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}col-xl-9{{else}}{{end}}{{ else }}{{ end }}{{ end }} mt-0">
+                                      
+                                           
+                                            <div id="content" class="main-content" {{ if eq .Site.Params.docs.toc true -}}data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile"{{ end }}>
+                                                {{ block "main" . }}{{ end }}
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer.html") . -}}
+
+                    </main>
+         
+        </div>
+
+      
+
+        <!-- Dark Mode Switch JS -->
+        {{ if eq .Site.Params.docs.darkMode true -}}
+            {{ $darkModeSwitch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-switch.js") | js.Build | minify }}
+            <script>{{ $darkModeSwitch.Content | safeJS }}</script>
+        {{ end -}}
+
+        {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer/footer-scripts.html") . -}}
+
+
+     
+    </body>
+</html>

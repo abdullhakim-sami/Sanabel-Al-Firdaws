@@ -1,24 +1,16 @@
-{{ define "main" }}
-    {{ $landingData := .Site.Data.landing }}
-    {{ $map := newScratch }}
+{{ define "main"}}
+<div class="">
+<div class="container m-5 p-3 ">
 
-    {{ range $key, $value := $landingData }}
-        {{ $sectionTitle := (index $key) }}
-        {{ $weight := string ($value.weight) }}
-        {{ $template := string (replaceRE `( |-{1,})` "_" $value.template) }}
-        {{ with and $template $weight }}
-            {{ $map.SetInMap "wgtTpl" $sectionTitle (dict
-            "weight" $weight
-            "template" $template
-            "sectionTitle" $sectionTitle
-            )}}
-        {{ end }}
-    {{ end }}
+        <h1>
+            الصفحة الرئيسية
 
-    {{ range sort ($map.Get "wgtTpl") ".weight" }}
-        {{ $.Scratch.Set "sectionTitle" .sectionTitle }}
-        {{ $path := printf "landing/%s.html" .template }}
-        {{ partial $path $.Page }}
-    {{ end }}
-    {{/* printf "%s" (sort ($map.Get "wgtTpl") ".weight" ) */}}
+        </h1> 
+        
+            </div>
+        <div class="container mt-lg-5 p-1 ">
+      {{ .Content }}
+   
+    </div>
+</div>
 {{ end }}
