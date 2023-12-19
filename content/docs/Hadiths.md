@@ -9,6 +9,8 @@ draft: false
 toc: true
 ---
 
+<div id="search"></div>
+
 ## كتاب الطهارة
 
 ### باب الوضوء

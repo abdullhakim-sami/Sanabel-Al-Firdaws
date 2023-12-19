@@ -10,3 +10,18 @@ title = 'My New Hugo Site'
     [[module.imports]]
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
         disable = false
+
+
+[params.flexsearch]
+  enabled             = false
+  tokenize            = "forward" # default is "forward"
+  cache               = 100    # default is 100
+  optimize            = true   # default is true
+  minQueryChar        = 3      # default is 0 (disabled)
+  maxResult           = 5      # default is 5
+  searchSectionsIndex = []
+
+[markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+     

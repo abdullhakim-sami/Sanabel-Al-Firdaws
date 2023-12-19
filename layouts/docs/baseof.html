@@ -8,14 +8,14 @@
         {{ $.Scratch.Add "social_list" (slice .) }}
     {{ end }}
 {{ end }}
-<html lang="{{ site.LanguageCode }}">
+<html lang="{{ site.LanguageCode }}" dir="rtl">
     {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head.html") . -}}
     <body>
         <div class="content">
             <div class="page-wrapper toggled">
                 {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "sidebar.html") . -}}
                     <!-- Start Page Content -->
-                    <main class="page-content bg-transparent "  dir="rtl">
+                    <main class="page-content bg-transparent">
                         {{ if .Site.IsMultiLingual }}
                             {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "top-header.html") . -}}
                         {{ else }}
@@ -29,9 +29,9 @@
                                             {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "breadcrumbs.html") . -}}
                                         </div>
                                     {{ end }}
-                                    <div  class="row flex-xl-nowrap">
+                                    <div class="row flex-xl-nowrap">
                                         {{ if site.Params.docs.toc | default true }}
-                                        <div dir="rtl" class="docs-toc col-xl-3 {{ if .IsNode }}visually-hidden{{ else }}{{end}} {{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}{{ else }}visually-hidden{{ end }} {{ if site.Params.docs.toc | default true }}{{ else }}visually-hidden{{ end }} d-xl-block">
+                                        <div class="docs-toc col-xl-3 {{ if .IsNode }}visually-hidden{{ else }}{{end}} {{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}{{ else }}visually-hidden{{ end }} {{ if site.Params.docs.toc | default true }}{{ else }}visually-hidden{{ end }} d-xl-block">
                                             {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "toc.html") . -}}
                                         </div>
                                         {{ end }}
@@ -43,7 +43,7 @@
                                             {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "toc-mobile.html") . -}}
                                         </div>
                                         {{ end -}}
-                                        <div dir="rtl"class="docs-content col-12 {{ if .IsNode }}{{ else }}{{ if site.Params.docs.toc | default true }}{{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}col-xl-9{{else}}{{end}}{{ else }}{{ end }}{{ end }} mt-0">
+                                        <div class="docs-content col-12 {{ if .IsNode }}{{ else }}{{ if site.Params.docs.toc | default true }}{{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}col-xl-9{{else}}{{end}}{{ else }}{{ end }}{{ end }} mt-0">
                                             <div class="mb-0 d-flex">
                                                 {{ if site.Params.docs.titleIcon | default false }}
                                                 <i class="material-icons title-icon me-2">{{- .Params.icon | default "article" }}</i>
