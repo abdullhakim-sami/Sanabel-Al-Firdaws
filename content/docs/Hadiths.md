@@ -9,7 +9,15 @@ draft: false
 toc: true
 ---
 
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search",  highlightParam: "highlight" ,showSubResults: true });
+    });
+</script>
+<div data-pagefind-body>
 
 ## كتاب الطهارة
 
@@ -1793,3 +1801,5 @@ toc: true
 التخريج : أخرجه مسلم (162) باختلاف يسير
 
 /
+
+</div>
